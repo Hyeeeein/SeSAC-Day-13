@@ -1,0 +1,154 @@
+/* 헤더 */
+header {
+    width: 100%;
+}
+
+header .header-txt {
+    background-color: cadetblue;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.header-txt h1 {
+    font-size: 50px;
+    padding: 20px 0;
+    color: aliceblue;
+}
+
+header .header-depth1 {
+    background-color: #5f9ea091;
+}
+
+header .header-depth2 {
+    display: flex;
+
+    width: 80%;
+    margin: auto;
+}
+
+.header-depth2 li a {
+    display: block;
+    border-right: 1px solid #fff;
+    height: 40px;
+    padding: 10px;
+    box-sizing: border-box;
+    color: aliceblue;
+}
+
+.header-depth2 li a:hover {
+    background-color: #fff;
+    color: cadetblue;
+}
+
+.header-depth2 li:nth-child(1) {
+    border-left: 1px solid #fff;
+}
+
+/* 메인 */
+main {
+    width: 100%;
+}
+
+main>section {
+    width: 80%;
+    margin: auto;
+    display: flex;
+}
+
+main .main1 {
+    flex: 30%;
+}
+
+.main1 .memo {
+    background-color: #78ab78;
+    margin-top: 20px;
+    padding: 10px;
+    margin-right: 20px;
+}
+
+.memo h2 {
+    font-size: 20px;
+    color: beige;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.memo p {
+    font-size: 13px;
+    line-height: 20px;
+    word-break: break-all;
+}
+
+main .main2 {
+    flex: 70%;
+    margin-top: 20px;
+}
+
+.main2 .dap {
+    border-bottom: 2px solid #416a5b;
+    margin-bottom: 15px;
+}
+
+.main2 .dap>dt {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: darkslategray;
+}
+
+.main2 .dap>dd {
+    font-size: 13px;
+    line-height: 20px;
+    word-break: break-all;
+}
+
+/* 푸터 */
+footer {
+    width: 100%;
+    text-align: center;
+}
+
+footer>p {
+    padding: 15px 0 30px
+}
+
+/* 640~960 */
+@media screen and (min-width:640px) and (max-width:960px) {
+    section {
+        flex-direction: column;
+    }
+
+    .main1 {
+        display: flex;
+        flex: 100%;
+    }
+
+    .memo:nth-child(2) {
+        margin-right: 0;
+    }
+}
+
+/* ~640 */
+@media screen and (max-width:639px) {
+    .wrap .header-depth1 .header-depth2 {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .header-depth2>li {
+        text-align: center;
+    }
+
+    .header-depth2 li:nth-child(1) {
+        border-left: none;
+    }
+
+    .wrap .header-depth2 li a {
+        border-right: none;
+        width: 100%;
+    }
+
+    section {
+        flex-direction: column;
+    }
+}
